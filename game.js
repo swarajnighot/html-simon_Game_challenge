@@ -14,6 +14,17 @@ $(document).keypress(function () {
     }
 })
 
+someElement.addEventListener(
+$(document).touchstart(function () {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+})
+
+
+
 function nextSequence() {
 
     userClickedPattern = [];
@@ -103,15 +114,3 @@ function startOver() {
 }
 
 
-someElement.addEventListener(
-    "touchstart",
-    (e) => {
-      // Log the state of this event's modifier keys
-       (e) => {
-      // Log the state of this event's modifier keys
-      console.log(`altKey = ${e.altKey}`);
-      e.altKey;
-    },
-    },
-    false,
-  );
