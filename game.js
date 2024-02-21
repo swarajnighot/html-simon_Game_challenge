@@ -6,6 +6,7 @@ var started = false;
 var level = 0;
 
 
+
 $(document).keypress(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
@@ -14,15 +15,22 @@ $(document).keypress(function () {
     }
 })
 
-someElement.addEventListener(
-$(document).touchstart(function () {
+// $(document).touchstart(function () {
+//     if (!started) {
+//         $("#level-title").text("Level " + level);
+//         nextSequence();
+//         started = true;
+//     }
+// })
+
+if ("ontouchstart" in document.documentElement)
+{
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
     }
-})
-
+}
 
 
 function nextSequence() {
@@ -112,5 +120,4 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
-
 
