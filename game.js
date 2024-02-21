@@ -15,7 +15,7 @@ $(document).keypress(function () {
     }
 })
 
-body.addEventListener(
+$(document).addEventListener(
   "touchmove",
   (e) => {
     // Iterate through the list of touch points that changed
