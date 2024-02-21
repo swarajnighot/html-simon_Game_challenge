@@ -15,21 +15,6 @@ $(document).keypress(function () {
     }
 })
 
-$(document).addEventListener(
-  "touchmove",
-  (e) => {
-    // Iterate through the list of touch points that changed
-    // since the last event and print each touch point's identifier.
-    for (let i = 0; i < e.changedTouches.length; i++) {
-       if (!started) {
-        $("#level-title").text("Level " + level);
-        nextSequence();
-        started = true;
-    }
-    }
-  },
-  false,
-);
 
 
 function nextSequence() {
