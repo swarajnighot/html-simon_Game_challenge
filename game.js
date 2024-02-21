@@ -15,22 +15,22 @@ $(document).keypress(function () {
     }
 })
 
-// $(document).touchstart(function () {
-//     if (!started) {
-//         $("#level-title").text("Level " + level);
-//         nextSequence();
-//         started = true;
-//     }
-// })
-
-if ("ontouchstart" in document.documentElement)
-{
+$(document).touchstart(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
     }
-}
+})
+
+// if ("ontouchstart" in document.documentElement)
+// {
+//     if (!started) {
+//         $("#level-title").text("Level " + level);
+//         nextSequence();
+//         started = true;
+//     }
+// }
 
 
 function nextSequence() {
