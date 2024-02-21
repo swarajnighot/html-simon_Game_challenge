@@ -101,3 +101,16 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
+
+
+someElement.addEventListener(
+    "touchstart",
+    (e) => {
+      // Log the state of this event's modifier keys
+      console.log(`altKey = ${e.altKey}`);
+      console.log(`ctrlKey = ${e.ctrlKey}`);
+      console.log(`metaKey = ${e.metaKey}`);
+      console.log(`shiftKey = ${e.shiftKey}`);
+    },
+    false,
+  );
